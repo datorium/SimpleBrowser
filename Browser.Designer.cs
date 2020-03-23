@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browser));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.buttonHome = new System.Windows.Forms.Button();
             this.AddressBar = new System.Windows.Forms.TextBox();
@@ -178,9 +179,10 @@
             this.Controls.Add(this.buttonHome);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Browser";
-            this.Text = "Form1";
+            this.Text = "Datorium Simple Browser";
             this.Resize += new System.EventHandler(this.Browser_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
