@@ -62,6 +62,7 @@
             this.AddressBar.Name = "AddressBar";
             this.AddressBar.Size = new System.Drawing.Size(458, 38);
             this.AddressBar.TabIndex = 2;
+            this.AddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBar_KeyDown);
             // 
             // buttonGo
             // 
