@@ -10,12 +10,22 @@ using System.Windows.Forms;
 
 namespace SimpleBrowser
 {
-    public partial class Form1 : Form
+    public partial class Browser : Form
     {
-        public Form1()
+        public Browser()
         {
             InitializeComponent();
+            InitializeBrowser();
         }
 
+        private void InitializeBrowser()
+        {
+            webBrowser1.ScriptErrorsSuppressed = true;
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("www.google.com");
+        }
     }
 }
