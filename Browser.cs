@@ -55,5 +55,39 @@ namespace SimpleBrowser
         {
             webBrowser1.Height = this.ClientRectangle.Height - 80;
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Very cool browser");
+        }
+
+        private void darkModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Color darkColor = Color.FromArgb(50, 50, 50);
+            Color lightColor = Color.White;
+            this.BackColor = darkColor;
+            foreach(Control item in this.Controls)
+            {
+                item.BackColor = darkColor;
+                item.ForeColor = lightColor;
+            }
+        }
+
+        private void lightModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Color darkColor = Color.FromArgb(50, 50, 50);
+            Color lightColor = Color.White;
+            this.BackColor = lightColor;
+            foreach (Control item in this.Controls)
+            {
+                item.BackColor = lightColor;
+                item.ForeColor = darkColor;
+            }
+        }
     }
 }
