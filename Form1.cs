@@ -15,31 +15,7 @@ namespace SimpleBrowser
         public Browser()
         {
             InitializeComponent();
-            InitializeBrowser();
-        }
-        private void InitializeBrowser()
-        {
-            webBrowser1.ScriptErrorsSuppressed = true;
         }
 
-        private void buttonHome_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Navigate("www.google.com");
-        }
-
-        private void buttonGo_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Navigate(AddressBar.Text);
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoBack();
-        }
-
-        private void buttonForward_Click(object sender, EventArgs e)
-        {
-            webBrowser1.GoForward();
-        }
     }
 }
