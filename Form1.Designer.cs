@@ -1,6 +1,6 @@
 ﻿namespace SimpleBrowser
 {
-    partial class Browser
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
