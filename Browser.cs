@@ -42,5 +42,18 @@ namespace SimpleBrowser
         {
             webBrowser1.GoForward();
         }
+
+        private void AddressBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                webBrowser1.Navigate(AddressBar.Text);
+            }
+        }
+
+        private void Browser_Resize(object sender, EventArgs e)
+        {
+            webBrowser1.Height = this.ClientRectangle.Height - 80;
+        }
     }
 }
