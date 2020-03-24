@@ -21,6 +21,7 @@ namespace SimpleBrowser
         private void InitializeBrowser()
         {
             webBrowser1.ScriptErrorsSuppressed = true;
+            
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace SimpleBrowser
 
         private void lightModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Color darkColor = Color.FromArgb(50, 50, 50);
+            Color darkColor = Color.Black;
             Color lightColor = Color.White;
             this.BackColor = lightColor;
             foreach (Control item in this.Controls)
