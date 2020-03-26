@@ -87,5 +87,19 @@ namespace SimpleBrowser
                 this.Close();
             }
         }
+
+        private void darkModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Color darkColor = Color.Black;
+            Color lightColor = Color.White;
+
+            foreach(Control item in this.Controls)
+            {
+                item.BackColor = darkColor;
+                item.ForeColor = lightColor;
+            }
+            this.BackColor = darkColor;
+            this.ForeColor = lightColor;
+        }
     }
 }
