@@ -66,5 +66,26 @@ namespace SimpleBrowser
                 buttonGo_Click(sender, e);
             }
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
+
+        private void Browser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F)
+            {
+                this.Close();
+            }
+        }
+
+        private void webBrowser1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if(e.Alt && e.KeyCode == Keys.F)
+            {
+                this.Close();
+            }
+        }
     }
 }
